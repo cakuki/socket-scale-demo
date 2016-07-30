@@ -28,4 +28,8 @@ io.on('connection', function (socket) {
     }, 5000);
 });
 
+app.get('/', function (req, res) {
+    res.send('It\'s working!');
+});
+
 module.exports = server;
