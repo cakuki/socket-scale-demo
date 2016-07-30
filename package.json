@@ -1,0 +1,29 @@
+{
+  "name": "socket-scale-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/api/index.js",
+  "dependencies": {
+    "express": "^4.14.0",
+    "socket.io": "^1.4.8",
+    "debug": "latest"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3",
+    "socket.io-client": "^1.4.8"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cakuki/socket-scale-demo.git"
+  },
+  "author": "Can Kutlu Kinay <me@ckk.im>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cakuki/socket-scale-demo/issues"
+  },
+  "homepage": "https://github.com/cakuki/socket-scale-demo#readme"
+}
