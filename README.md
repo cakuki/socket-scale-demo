@@ -15,3 +15,5 @@ Then to scale socket api run: `docker-compose scale api=3` for 3 processes.
 ### Docker Cloud
 
 First log in with docker cli (`docker login`) with your docker hub user/password.
+
+With [docker-cloud cli](https://docs.docker.com/docker-cloud/installing-cli/#/install) you can create and run the stack with `docker-cloud up` command.
