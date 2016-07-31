@@ -2,6 +2,10 @@
 
 This is a demo socket api with on-demand-scalability.
 
+## Testing
+
+You can run tests in your local by `npm test`.
+
 ## Running
 
 ### Local
