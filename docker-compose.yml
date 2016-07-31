@@ -1,0 +1,25 @@
+version: '2'
+services:
+  api:
+    build: .
+    command: npm start
+    environment:
+      - VIRTUAL_HOST=localhost
+      - BALANCE=source
+    ports:
+      - 3000
+    restart: always
+  proxy:
+    image: dockercloud/haproxy:1.5.1
+    links:
+      - api
+    ports:
+      - 80:80
+      - 443:443
+    environment:
+      - DOCKER_TLS_VERIFY
+      - DOCKER_HOST
+      - DOCKER_CERT_PATH
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: always
