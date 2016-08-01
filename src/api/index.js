@@ -3,6 +3,8 @@ var server = require('http').createServer(app);
 var io = require('socket.io').listen(server);
 var debug = require('debug')('api');
 
+var processId = Math.random();
+
 io.on('connection', function (socket) {
     var interval;
 
@@ -18,13 +20,13 @@ io.on('connection', function (socket) {
 
     socket.on('get name', function (cb) {
         if (cb)
-            return cb(socket._user_name);
+            return cb(socket._user_name, processId);
 
-        socket.emit('message', socket._user_name);
+        socket.emit('message', socket._user_name, processId);
     });
 
     interval = setInterval(function () {
-        socket.emit('datetime', new Date());
+        socket.emit('datetime', new Date(), processId);
     }, 5000);
 });
 
